@@ -1,0 +1,29 @@
+show dbs
+use test
+db.createCollection('users')
+show dbs
+db.users.insert({"first_name": "Harshal", "last_name": "Pagar", "email": "harshalpagar456@gmail.com", "gender": "male", "ip_address": "8948-7384-3747", "age": "24"})
+db.users.find({})
+db.users.insertMany([{"first_name": "chaitanya", "last_name": "patil", "email": "chaitanya@gmail.com", "gender": "male", "ip_address": "5654-9748-5483", "age": "24"},
+                     {"first_name": "mayur", "last_name": "shewale", "email": "mayur@gmail.com", "gender": "female", "ip_address": "9014-0348-6743", "age": "22"},
+                     {"first_name": "atul", "last_name": "khairnar", "email": "atul@gmail.com", "gender": "male", "ip_address": "6974-1238-3483", "age": "27"},
+                     {"first_name": "santosh", "last_name": "nikam", "email": "santosh@gmail.com", "gender": "male", "ip_address": "9784-0948-0883", "age": "25"},
+                     {"first_name": "sagar", "last_name": "deore", "email": "sagar@gmail.com", "gender": "male", "ip_address": "4574-0848-7903", "age": "30"}])
+db.users.find({})
+db.users.insertMany([{"first_name": "mahesh", "last_name": "deore", "email": "mahesh@gmail.com", "gender": "male", "ip_address": "0054-9148-5993", "age": "27"},
+                     {"first_name": "harsh", "last_name": "deore", "email": "harsh@gmail.com", "gender": "male", "ip_address": "5554-7748-5583", "age": "26"},
+                     {"first_name": "ganesh", "last_name": "hyalij", "email": "ganesh@gmail.com", "gender": "male", "ip_address": "1154-9998-0083", "age": "26"}])
+db.users.find({})
+db.users.find({"first_name": "mahesh"})
+db.users.updateMany({"first_name": "dharmesh"},{$set: {"company": "MASAI"}})
+db.users.updateMany({"first_name": "vaibhav"},{$set: {"company": "MASAI"}})
+db.users.updateMany({"first_name": "shubham"},{$set: {"company": "MASAI"}})
+db.users.find({})
+db.users.remove({"first_name": "mangesh"})
+db.users.find({})
+db.users.remove({"company": "MASAI"}, 1)
+db.users.find({})
+db.users.remove({"company": "MASAI"}) 
+db.users.find({})
+db.dropDatabase()
+show dbs
