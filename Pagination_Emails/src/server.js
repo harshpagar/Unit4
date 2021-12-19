@@ -1,7 +1,8 @@
-const app = require("./index");
-const connect =require("./configs/db");
+const app = require("./index")
 
-app.listen(1234,async function () {
-    await connect();
-    console.log("listening on port 1234");
-});
+const connect  = require("./configs/db")
+
+app.listen(2021, async () => {
+    await connect()
+    console.log("Listening on port 2021")
+})
